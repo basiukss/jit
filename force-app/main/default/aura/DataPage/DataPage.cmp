@@ -1,0 +1,27 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome" 
+                controller="DataManager"
+                access="global">
+    <aura:attribute name="status" type="String" default=""/>
+    <div class="slds-card">
+        <lightning:layout class="slds-grid slds-page-header">            
+            	<h1 class="slds-page-header__title slds-truncate" title="Data Manager">Data Manager</h1>
+        </lightning:layout>
+        <lightning:layout class="slds-grid" multipleRows="true">
+            <lightning:layoutItem class="slds-col slds-size_1-of-1">    
+                <p>{!v.status}</p>
+            </lightning:layoutItem>
+            <lightning:layoutItem class="slds-col">    
+                <lightning:button label="clean" 
+                    variant="neutral"
+                    iconName="utility:delete"
+                    iconPosition="right"
+                    onclick="{!c.clickClean}"/>   
+                <lightning:button label="generate_data" 
+                    variant="neutral"
+                    iconName="utility:add"
+                    iconPosition="right"
+                    onclick="{!c.clickGenerateData}"/>
+            </lightning:layoutItem>
+        </lightning:layout>
+    </div>
+</aura:component>
