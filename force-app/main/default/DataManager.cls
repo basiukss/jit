@@ -57,7 +57,7 @@ public with sharing class DataManager {
         
         for(Contact cnt : contacts){
             for(Integer y=0; y < rnd(0,10); y++){
-                Case cs = new Case(ContactId = cnt.Id, Status='Working',Origin='New Contact', Comments = 'Case'+(y+1));
+                Case cs = new Case(ContactId = cnt.Id, Status='Working',Origin='New Contact', Description = 'Case'+(y+1));
                 cases.add(cs);
             }
         }        
